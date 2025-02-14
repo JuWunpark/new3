@@ -49,6 +49,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'blog.middleware.AutoLogoutMiddleware',  # 여기에 추가
 ]
 # asjdfhkjshdf
 ROOT_URLCONF = "new3.urls"
@@ -169,3 +170,12 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER  # 이메일 보내는 사람
 #         },
 #     },
 # }
+SESSION_COOKIE_AGE = 3600  # 1시간 (3600초)
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+
+SESSION_SAVE_EVERY_REQUEST = True
+
+LOGOUT_REDIRECT_URL = '/login/' # 수정필요
+
+MIDDLEWARE.append('blog.middleware.AutoLogoutMiddleware')
