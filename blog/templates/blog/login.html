@@ -41,10 +41,12 @@
                       <div class="button-wrapper"><button class="button-3" type="submit">Sign in</button></div>
                     </div>
                   </div>
-
-                  <div class="text-link"><div class="text-link-2">Forgot password?</div></div>
-                </div>
-          </form>
+            <!-- 비밀번호 찾기 링크 수정 -->
+            <div class="text-link">
+              <a class="text-link-2" href="{% url 'password_reset' %}">Forgot password?</a>
+            </div>
+          </div>
+        </form>
 
         <div class="overlap-group"><div class="text-wrapper-2">로그인</div></div>
 
@@ -52,3 +54,13 @@
     </div>
   </body>
 </html>
+{#                  <div class="text-link"><div class="text-link-2">Forgot password?</div></div>#}
+{#                </div>#}
+{#          </form>#}
+{##}
+{#        <div class="overlap-group"><div class="text-wrapper-2">로그인</div></div>#}
+{##}
+{#      </div>#}
+{#    </div>#}
+{#  </body>#}
+{#</html>#}

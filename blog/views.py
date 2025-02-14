@@ -76,7 +76,11 @@ def password_change(request):
 def home(request):
     return render(request, 'home.html')
 
+@login_required(login_url='/login/')  # ⬅ 로그인하지 않은 사용자는 '/login/'으로 리디렉션
 def prompt(request):
     return render(request, 'blog/prompt.html')
 def export(request):
     return render(request, 'blog/export.html')
+@login_required(login_url='/login/')  # ⬅ 로그인하지 않은 사용자는 '/login/'으로 리디렉션
+def profile(request):
+    return render(request, 'profile.html')  # profile.html 페이지 렌더링

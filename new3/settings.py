@@ -140,3 +140,32 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = 'blog.CustomUser'
+
+# 이메일 백엔드 설정
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+# 이메일 서버 설정
+EMAIL_HOST = 'smtp.gmail.com'  # Gmail SMTP 서버
+EMAIL_PORT = 587  # SMTP 포트 (TLS)
+EMAIL_USE_TLS = True  # TLS를 사용
+EMAIL_HOST_USER = 'autoppt3@gmail.com'  # 보내는 이메일 주소
+EMAIL_HOST_PASSWORD = 'fqhh wfyc rngk dxfp'  # Gmail 앱 비밀번호
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER  # 이메일 보내는 사람
+
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'handlers': {
+#         'console': {
+#             'level': 'DEBUG',
+#             'class': 'logging.StreamHandler',
+#         },
+#     },
+#     'loggers': {
+#         'django': {
+#             'handlers': ['console'],
+#             'level': 'DEBUG',
+#             'propagate': True,
+#         },
+#     },
+# }
